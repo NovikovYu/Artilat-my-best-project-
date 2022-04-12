@@ -1,0 +1,64 @@
+.contacts {
+  &__item {
+    margin-bottom: 15px;
+
+    @include media($md4) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  &__link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    line-height: 2;
+    font-weight: 400;
+    color: $dark;
+    padding-left: 29px;
+
+    &::before {
+      position: absolute;
+      content: '';
+      top: 3;
+      left: 0;
+      background-color: $dark;
+      mask-size: cover;
+      mask-position: center;
+      mask-repeat: no-repeat;
+      width: 24px;
+      height: 24px;
+      transition: background-color 0.3s;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    &:hover::before {
+      background-color: $blue-900;
+    }
+
+    &:active::before {
+      background-color: $dark;
+    }
+  }
+
+  &__link--location {
+    &::before {
+      mask-image: url("../images/sprite.svg#location");
+    }
+  }
+
+  &__link--phone {
+    &::before {
+      mask-image: url("../images/sprite.svg#calling");
+    }
+  }
+
+  &__link--email {
+    &::before {
+      mask-image: url("../images/sprite.svg#message");
+    }
+  }
+}

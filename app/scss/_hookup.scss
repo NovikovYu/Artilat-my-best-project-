@@ -1,0 +1,70 @@
+.hookup {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-align: center;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    
+  }
+
+  &__content {
+    max-width: 530px;
+    font-size: 16px;
+    font-style: normal;
+  }
+
+  &__text {
+    margin-bottom: 30px;
+    line-height: 1.6;
+  }
+
+  &__list {
+    margin-bottom: 20px;
+  }
+
+  &__item {
+    margin-bottom: 15px;
+  }
+
+  &__item:last-child {
+    margin-bottom: 0;
+  }
+
+  &__link {
+    display: inline-block;
+    line-height: 1.3;
+    color: #2352de;
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    transition: text-decoration-color 0.5s, opacity 0.5s;
+    outline: transparent;
+    outline-offset: 0;
+  }
+
+  &__link:focus {
+    box-shadow: 0 0 0 2px rgba(35, 82, 222, 0.5);
+    border-radius: 3px;
+  }
+
+  &__link:hover {
+    text-decoration-color: #2352de;
+    box-shadow: none;
+  }
+
+  &__link:active {
+    text-decoration-color: transparent;
+    opacity: 0.7;
+    box-shadow: none;
+  }
+
+  &__link--tel {
+    margin-bottom: 15px;
+    margin-right: calc(100% - 150px);
+  }
+
+  &__link--email {
+    margin-bottom: 23px;
+  }
+}

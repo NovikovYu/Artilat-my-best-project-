@@ -1,0 +1,61 @@
+.breadcrumbs {
+  padding: 24px 0;
+  background-color: rgba(80, 112, 255, 0.1);
+
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+
+  &__item {
+    position: relative;
+    padding-right: 16px;
+    height: 17px;
+    font-size: 14px;
+
+    @include media($md4) {
+      display: none;
+    }
+
+    &:first-child {
+      @include media($md4) {
+        display: list-item;
+      }
+    }
+
+    &:last-child {
+      padding-right: 0;
+
+      @include media($md4) {
+        display: list-item;
+      }
+
+      &::after {
+        width: 0;
+        height: 0;
+      }
+    }
+
+    &::after {
+      position: absolute;
+      content: '';
+      top: 4px;
+      right: 4px;
+      width: 6px;
+      height: 10px;
+      background-image: url("../images/sprite.svg#chevron");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+    }
+  }
+
+  &__link {
+    height: 17px;
+    font-family: "Rubik", sans-serif;
+    font-size: 14px;
+    line-height: 1;
+    color: $lightdark;
+    letter-spacing: 0.03em;
+  }
+}

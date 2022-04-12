@@ -1,0 +1,65 @@
+.advice {
+  margin-bottom: 117px;
+
+  @include media($md3) {
+    margin-bottom: 40px;
+  }
+
+  &__title {
+    text-align: left;
+    margin-left: 15px;
+    margin-bottom: 60px;
+
+    @include media($md3) {
+      font-size: 20px;
+      margin-left: 0;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__container {
+    padding: 0;
+
+    @include media($md4) {
+      padding: 0 12.5px;
+    }
+  }
+
+  .slick-slide {
+    padding: 0 15px;
+
+    @include media($md4) {
+      padding: 0 2.5px;
+    }
+  }
+
+  &__list {
+    position: relative;
+    text-align: center;
+  }
+
+  &__item {
+    padding: 1px 0;
+  }
+
+  .slick-prev {
+    position: absolute;
+    left: auto;
+    top: -100px;
+    right: 75px;
+    font-size: 0;
+    line-height: 0;
+  }
+
+  .slick-next {
+    position: absolute;
+    top: -100px;
+    right: 15px;
+    font-size: 0;
+    line-height: 0;
+  }
+
+  .slick-dots {
+    margin-top: 12px;
+  }
+}

@@ -1,0 +1,33 @@
+// подключение базовых стилей
+@import '../scss/common/reset';
+@import '../scss/common/fonts';
+@import '../scss/common/libs';
+@import '../scss/common/vars';
+@import '../scss/common/global';
+
+// подключение компонентов
+@import '../scss/components/logo';
+@import '../scss/components/product-card';
+@import '../scss/components/breadcrumbs';
+@import '../scss/components/contacts';
+
+
+// header
+@import 'header';
+
+// main
+@import 'hero';
+@import 'goods';
+@import 'benefits';
+
+// product page
+@import 'product';
+@import 'tabs';
+@import 'advice';
+
+// connection
+@import 'history';
+@import 'hookup';
+
+// footer
+@import 'footer';

@@ -1,0 +1,23 @@
+.logo {
+  width: 200px;
+  outline: transparent;
+  transition: opacity 0.3s;
+
+  @include media($md4) {
+    width: 115px;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 2px rgba(56, 56, 255, 0.7);
+    border-radius: 5px;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.5;
+    box-shadow: none;
+  }
+}

@@ -1,0 +1,43 @@
+$white: #ffffff;
+$blue-900: #233268;
+$blue: #94a2ff;
+$blue-light: #edf3ff;
+$blue-superlight: #edeefa;
+$silver: #eeeef3;
+$silver-200: #ececec;
+$silver-100: #f9faff;
+$light-gray: #c1c1c1;
+$gray: #c2c2c2;
+$dark-gray: #e4e4e4;
+$darkBlue-900: #363853;
+$dark: #31352b;
+$lightdark: #505050;
+$braund: #9a7f46;
+
+$md0: 1700;
+$md1: 1200;
+$md2: 992;
+$md3: 768;
+$md4: 576;
+
+@mixin media($width) {
+  @media (max-width: #{$width}px) {
+    @content;
+  }
+}
+
+@mixin line-clamp($lines: 1) {
+  @if $lines <=1 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  @else {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: $lines;
+    -webkit-box-orient: vertical;
+  }
+}
